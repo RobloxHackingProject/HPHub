@@ -21,20 +21,7 @@ function esp(target, color)
     end)
 end
 
-players.PlayerAdded:Connect(function(v)
-    v.CharacterAdded:Connect(function()
-        esp(v, _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor))
-    end)
-end)
-
-players.PlayerRemoving:Connect(function(v)
-    if highlights[v] then
-        highlights[v]:Destroy()
-        highlights[v] = nil
-    end
-end)
-
-for i, v in pairs(players:GetPlayers()) do
+for i, v in pairs(players:GetChildren()) do
     if v ~= plr then
         local color = _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor)
         v.CharacterAdded:Connect(function()
