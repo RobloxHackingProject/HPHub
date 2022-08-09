@@ -1,6 +1,6 @@
 --Natural Disaster Survival
 if game.PlaceId == 189707 then do
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/NaturalDisasterSurvival.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ThijsDeGamer/Roblox-Scripts/HP-Hub/blob/main/NaturalDisasterSurvival.lua"))()
 end
 end
 
