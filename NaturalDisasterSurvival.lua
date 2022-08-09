@@ -48,6 +48,16 @@ Window:Toggle({
 	   end
    end
 })
+Window:Toggle({
+   Text = "Solid Island",
+   Callback = function(bool)
+for i, v in pairs (game.workspace:GetDescendants())do
+if v.Name == 'LowerRocks' then -- change part to the name you want to look for
+v.CanCollide = bool
+end
+end
+end
+})
 
 
 Window2:Button({
@@ -93,9 +103,22 @@ Window4:Slider({
        game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
    end
 })
+Window4:Slider({
+   Text = "Gravity",
+   Default = 196,
+   Minimum = 0,
+   Maximum = 196,
+   Callback = function(value)
+       game.Workspace.Gravity = value
+   end
+})
 
 Window5:Label({
    Text = "Made by: TRHP .gg/G3KVvt988s",
+   Color = Color3.fromRGB(214, 214, 214)
+})
+Window5:Label({
+   Text = "Version: 1.1",
    Color = Color3.fromRGB(214, 214, 214)
 })
 
