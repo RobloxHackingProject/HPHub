@@ -5,9 +5,15 @@ end
 end
 
 
---Next game lol
+--Kill R63 with DOOM music
 if game.PlaceId == 7378050129 then do
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/KillR63.lua"))()
+end
+end
+
+--Build to Survive!
+if game.PlaceId == 7250769796 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/BuildKillers.lua"))()
 end
 end
 
