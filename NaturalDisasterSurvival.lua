@@ -118,7 +118,7 @@ Window5:Label({
    Color = Color3.fromRGB(214, 214, 214)
 })
 Window5:Label({
-   Text = "Version: 1.1",
+   Text = "Version: 1.2",
    Color = Color3.fromRGB(214, 214, 214)
 })
 
