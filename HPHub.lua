@@ -6,7 +6,13 @@ end
 
 
 --Next game lol
+if game.PlaceId == 7378050129 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/KillR63.lua"))()
+end
+end
+
+--Lets
 if game.PlaceId == 6942069 then do
-	print("huh")
+		print("nice")
 end
 end
