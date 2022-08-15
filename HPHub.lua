@@ -17,8 +17,27 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
+--Nico's Nextbots
+if game.PlaceId == 10118559731 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/nico.lua"))()
+end
+end
+
+--99% Fail Impossible Obby
+if game.PlaceId == 7584496019 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/99%25fail.lua"))()
+end
+end
+
+--City Life
+if game.PlaceId == 5802642341 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/CityLife.lua"))()
+end
+end
+
 --Lets
 if game.PlaceId == 6942069 then do
 		print("nice")
 end
 end
+
