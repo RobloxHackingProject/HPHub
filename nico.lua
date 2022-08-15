@@ -26,7 +26,10 @@ local Window5 = Library:Window({
 local Window6 = Library:Window({
    Text = "Settings"
 })
-
+Library:Notification({
+           Text = "Press ESC to access the gui",
+           Duration = 10
+})
 Window:Button({
    Text = "Killer ESP",
    Callback = function(bool)
