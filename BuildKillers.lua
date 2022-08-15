@@ -27,7 +27,6 @@ Window:Button({
    Text = "Name ESP",
    Callback = function()
    game.Workspace.Killers.ChildAdded:Connect(function()
-	   print("amo")
      for __,v in pairs(game:GetService("Workspace").Killers:GetChildren()) do
       if v:IsA("Model") then
         local a = Instance.new("BillboardGui",v)
