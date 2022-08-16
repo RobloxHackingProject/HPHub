@@ -29,6 +29,39 @@ Window:Button({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/zeroisswag/universal-esp/main/esp.lua"))()
 end
 })
+Window:Dropdown({
+   Text = "Change Job",
+   List = {"Police", "Criminal", "Cleaner", "Cook", "Firefighter", "Hair salon", "Neutral"},
+   Callback = function(bool)
+      if bool == "Police" then do
+game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(5)
+   end
+   end
+      if bool == "Criminal" then do
+game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(7)
+   end
+   end
+      if bool == "Cleaner" then do
+		  game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(2)
+	  end
+   end
+      if bool == "Cook" then do
+game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(3)
+   end
+   end
+   if bool == "Firefighter" then do
+game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(4)
+   end
+   end
+   if bool == "Hair salon" then do
+game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(6)
+   end
+   end
+      if bool == "Neutral" then do
+game:GetService("ReplicatedStorage").remoteInterface.jobs.setJob:InvokeServer(1)
+   end
+   end
+   end})
 
 Window2:Dropdown({
    Text = "Work Locations",
@@ -61,7 +94,12 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156, 8, 
    end})
 
 
-
+Window3:Button({
+	Text = "Spawn car in police station",
+	Callback = function()
+		game:GetService("ReplicatedStorage").remoteInterface.vehicles.spawnPlayerVehicle:InvokeServer(CFrame.new(-108, 8, -930), 0)
+	end
+})
 Window3:Button({
 	Text = "Start Infinite Yield",
 	Callback = function()
