@@ -111,13 +111,18 @@ Window4:Slider({
        game.Workspace.Gravity = value
    end
 })
+Window4:Slider({
+	Text = "HipHeight",
+	Default = 3,
+	Minimum = 3,
+	Maximum = 50,
+	Callback = function(value)
+		game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
+	end
+})
 
 Window5:Label({
    Text = "Made by: TRHP .gg/G3KVvt988s",
-   Color = Color3.fromRGB(214, 214, 214)
-})
-Window5:Label({
-   Text = "Version: 1.2",
    Color = Color3.fromRGB(214, 214, 214)
 })
 
