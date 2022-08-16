@@ -123,10 +123,6 @@ Window5:Label({
    Text = "Made by: TRHP .gg/G3KVvt988s",
    Color = Color3.fromRGB(214, 214, 214)
 })
-Window5:Label({
-   Text = "Version: 1.2",
-   Color = Color3.fromRGB(214, 214, 214)
-})
 
 Window5:Keybind({
    Text = "Toggle Library",
