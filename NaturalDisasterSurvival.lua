@@ -61,6 +61,16 @@ Window:Toggle({
 		end
 	end
 })
+Window:Button({
+	Text = "Disable FallDamage",
+	Callback = function()
+	 Library:Notification({
+           Text = "If you die click disable falldamage again",
+           Duration = 5
+})
+game.Players.LocalPlayer.Character.FallDamageScript:Destroy()
+end
+})
 
 
 Window2:Button({
@@ -209,6 +219,15 @@ Window5:Button({
 	Text = "Remove Blizzard GUI",
 	Callback = function()
 		game.Players.LocalPlayer.PlayerGui.BlizzardGui:destroy()
+	end
+})
+Window5:Button({
+	Text = "Current Disaster",
+	Callback = function()
+  Library:Notification({
+           Text = game.Players.LocalPlayer.Character.SurvivalTag.Value,
+           Duration = 3
+})
 	end
 })
 
