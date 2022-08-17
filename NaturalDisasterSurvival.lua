@@ -165,6 +165,12 @@ Window3:Toggle({
 		end
 })
 Window3:Button({
+	Text = "Say Current Disaster",
+	Callback = function()
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(game.Players.LocalPlayer.Character.SurvivalTag.Value, "All")
+end
+})
+Window3:Button({
 	Text = "Start Infinite Yield",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/IYNotByMe.lua"))()
