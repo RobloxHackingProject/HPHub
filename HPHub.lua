@@ -35,6 +35,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
+--Work at a Pizza Place
+if game.PlaceId == 192800 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/pizza.lua"))()
+end
+end
+
 --Lets
 if game.PlaceId == 6942069 then do
 		print("nice")
