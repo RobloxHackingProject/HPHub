@@ -5,7 +5,7 @@ end
 _G.Reantheajfdfjdgse = "susan"
 
 local coregui = game:GetService("CoreGui")
-local players = game:GetService("Players")
+local players = game.Workspace.Items:GetChildren()
 local plr = players.LocalPlayer
 
 local highlights = {}
