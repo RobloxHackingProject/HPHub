@@ -15,8 +15,8 @@ function esp(target, color)
         if target.Character then
             if not highlights[target] then
                 local highlight = Instance.new("Highlight", coregui)
-                highlight.Name = target.Name
-                highlight.Adornee = target.Character
+                highlight.Name = target
+                highlight.Adornee = target
                 highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
                 highlight.FillColor = color
                 highlights[target] = highlight
