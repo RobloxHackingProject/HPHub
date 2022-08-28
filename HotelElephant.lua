@@ -38,7 +38,7 @@ end
 
 Window2:Dropdown({
    Text = "Hotel",
-    List = {"Hotel Entrance", "Basement", "Floor 1", "Floor 2", "Floor 3", "Floor 4", "Floor 5", "Outside Pool", "Inside Pool", "Island", "Cave"},
+    List = {"Hotel Entrance", "Basement", "Floor 1", "Floor 2", "Floor 3", "Floor 4", "Floor 5", "Outside Pool", "Inside Pool", "Secret Basement"},
    Callback = function(bool)
    if bool == "Hotel Entrance" then do
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(105, 100, -14)
@@ -76,12 +76,8 @@ end
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(129, 166, 54)
 end
 end
-   if bool == "Island" then do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-264, 196, 288)
-end
-end
-   if bool == "Cave" then do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-264, 196, 288)
+   if bool == "Secret Basement" then do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(112, 5, -57)
 end
 end
 end
