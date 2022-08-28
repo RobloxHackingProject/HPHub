@@ -40,7 +40,31 @@ end
 end
    end
 })
-
+Window:Button({
+   Text = "R63 ESP (Glitchy)",
+   Callback = function(bool)
+     for __,v in pairs(game:GetService("Workspace").SlederSpawn:GetChildren()) do
+      if v:IsA("Model") then
+        local a = Instance.new("BillboardGui",v)
+        a.Name = "Lol"
+        a.Size = UDim2.new(7,0,7,0)
+        a.AlwaysOnTop = true
+        a.MaxDistance = 250
+        local b = Instance.new("Frame",a)
+        b.Size = UDim2.new(1,0, 1,0)
+        b.BackgroundTransparency = 1
+        b.BorderSizePixel = 0
+        b.BackgroundColor3 = Color3.new(0, 0, 0)
+        local c = Instance.new('TextLabel',b)
+        c.Size = UDim2.new(2,0,2,0)
+        c.BorderSizePixel = 0
+        c.TextSize = 15
+        c.Text = v.Name
+        c.BackgroundTransparency = 1
+      end
+	 end
+  end
+  })
 
 
 Window2:Button({
@@ -118,9 +142,22 @@ Window4:Slider({
        game.Workspace.Gravity = value
    end
 })
+Window4:Slider({
+	Text = "HipHeight",
+	Default = 0,
+	Minimum = 0,
+	Maximum = 50,
+	Callback = function(value)
+		game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
+	end
+})
 
 Window5:Label({
    Text = "Made by: TRHP .gg/G3KVvt988s",
+   Color = Color3.fromRGB(214, 214, 214)
+})
+Window5:Label({
+   Text = "Version: 1.0",
    Color = Color3.fromRGB(214, 214, 214)
 })
 
