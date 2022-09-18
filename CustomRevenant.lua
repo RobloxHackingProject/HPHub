@@ -1,5 +1,5 @@
---Coming soon
---Credits: https://v3rmillion.net/showthread.php?tid=1182163
+--Circle fixf
+--https://v3rmillion.net/showthread.php?tid=1182163
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -134,7 +134,7 @@ local getcustomasset = getcustomasset or getsynasset
 if not isfolder("Revenant") then
     makefolder("Revenant")
     local Circle = Request({
-	Url = "https://github.com/Rain-Design/Libraries/blob/main/Icon/Circle.png?raw=true",
+	Url = "https://www.roblox.com/library/10946690675/Circle",
 	Method = "GET"
 	})
 	writefile("Revenant/Circle.png", Circle.Body)
