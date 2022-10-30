@@ -47,6 +47,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
+--3008 100 players
+if game.PlaceId == 9240295147 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/scp3008.lua"))()
+end
+end
+
 --Hotel Elephant
 if game.PlaceId == 23578803 then do
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/HotelElephant.lua"))()
