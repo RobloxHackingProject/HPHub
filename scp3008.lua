@@ -104,7 +104,7 @@ Window4:Slider({
    Text = "JumpPower",
    Default = 50,
    Minimum = 50,
-   Maximum = 250,
+   Maximum = 500,
    Callback = function(value)
        game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
    end
