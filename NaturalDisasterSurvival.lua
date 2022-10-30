@@ -245,9 +245,16 @@ Window5:Button({
 	end
 })
 
-Window6:Label({
-	Text = "Made by: TRHP .gg/G3KVvt988s",
-	Color = Color3.fromRGB(214, 214, 214)
+Window6:Button({
+   Text = "Made by: TRHP .gg/G3KVvt988s",
+   Color = Color3.fromRGB(214, 214, 214),
+   Callback = function()
+   setclipboard("discord.gg/G3KVvt988s")
+   	Library:Notification({
+           Text = "Copied to clipboad",
+           Duration = 3
+})
+   end
 })
 
 Window6:Keybind({
