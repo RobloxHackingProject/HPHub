@@ -171,6 +171,14 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 end
 })
 Window3:Button({
+	Text = "Remove Ads",
+	Callback = function()
+game:GetService("Workspace").BillboardAd:Destroy()
+game:GetService("Workspace").ForwardPortal:Destroy()
+game:GetService("Workspace").ReturnPortal:Destroy()
+end
+})
+Window3:Button({
 	Text = "Start Infinite Yield",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/IYNotByMe.lua"))()
