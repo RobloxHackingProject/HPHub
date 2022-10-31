@@ -150,7 +150,7 @@ Info.Text = Info.Text or "Revenant"
 local Pos = 0.05
 
 for _,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-    if v.Name == "Revenant" then
+    if v.Name == Info.Text then
         Pos = Pos + 0.12
     end
 end
@@ -158,7 +158,7 @@ end
 local insidewindow = {}
 
 local revenant = Instance.new("ScreenGui")
-revenant.Name = "Revenant"
+revenant.Name = Info.Text
 revenant.Parent = game:GetService("CoreGui")
 
 local WindowOpened = Instance.new("BoolValue", revenant)
