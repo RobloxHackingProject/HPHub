@@ -168,6 +168,7 @@ topbar.Parent = revenant
 local isrevenant = Instance.new("BoolValue")
 isrevenant.Value = true
 isrevenant.Parent = revenant
+isrevenant.Name = "isrevenant"
 
 local dragging
 local dragInput
