@@ -158,7 +158,7 @@ end
 local insidewindow = {}
 
 local revenant = Instance.new("ScreenGui")
-revenant.Name = Info.Text
+revenant.Name = "Revenant..+1"
 revenant.Parent = game:GetService("CoreGui")
 
 local WindowOpened = Instance.new("BoolValue", revenant)
