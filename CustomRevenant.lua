@@ -14,12 +14,6 @@ local UserInputService = game:GetService("UserInputService")
 
 local Blacklist = {Enum.KeyCode.Unknown, Enum.KeyCode.CapsLock, Enum.KeyCode.Escape, Enum.KeyCode.Tab, Enum.KeyCode.Return, Enum.KeyCode.Backspace, Enum.KeyCode.Space, Enum.KeyCode.W, Enum.KeyCode.A, Enum.KeyCode.S, Enum.KeyCode.D}
 
-for _,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-    if v.Name == "Revenant" then
-        v:Destroy()
-    end
-end
-
 function library:GetXY(GuiObject)
 	local Max, May = GuiObject.AbsoluteSize.X, GuiObject.AbsoluteSize.Y
 	local Px, Py = math.clamp(Mouse.X - GuiObject.AbsolutePosition.X, 0, Max), math.clamp(Mouse.Y - GuiObject.AbsolutePosition.Y, 0, May)
@@ -28,7 +22,7 @@ end
 
 function library:Toggle()
     for _,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-        if v.Name == "Revenant" then
+        if v.isrevenant.Value == true then
             v.Enabled = not v.Enabled
         end
     end
@@ -158,7 +152,7 @@ end
 local insidewindow = {}
 
 local revenant = Instance.new("ScreenGui")
-revenant.Name = "Revenant..+1"
+revenant.Name = Info.Text
 revenant.Parent = game:GetService("CoreGui")
 
 local WindowOpened = Instance.new("BoolValue", revenant)
@@ -170,6 +164,10 @@ topbar.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 topbar.Position = UDim2.fromScale(Pos, 0.1)
 topbar.Size = UDim2.fromOffset(225, 38)
 topbar.Parent = revenant
+
+local isrevenant = Instance.new("BoolValue")
+isrevenant.Value = true
+isrevenant.Parent = revenant
 
 local dragging
 local dragInput
@@ -1143,6 +1141,11 @@ close.MouseButton1Click:Connect(function()
     TweenService:Create(backgroundFrame, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = WindowOpened.Value and UDim2.new(0, 225, 0, BackgroundSize) or UDim2.new(0, 225, 0, 0)}):Play()
     TweenService:Create(close, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Rotation = WindowOpened.Value and 0 or 180}):Play()
 end)
+	for _,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+    if v.Name == "Revenant" then
+        v:Destroy()
+    end
+end
 
 return insidewindow
 end
