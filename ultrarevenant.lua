@@ -277,7 +277,6 @@ button.Name = "Button"
 button.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 button.Size = UDim2.fromOffset(225, 38)
 button.Parent = itemContainer
-button.Modal = true
 
 local uICorner2 = Instance.new("UICorner")
 uICorner2.Name = "UICorner"
@@ -304,6 +303,7 @@ buttonTextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 buttonTextButton.BackgroundTransparency = 1
 buttonTextButton.Size = UDim2.fromOffset(225, 38)
 buttonTextButton.Parent = button
+buttonTextButton.Modal = true
 
 local buttonTextLabel = Instance.new("TextLabel")
 buttonTextLabel.Name = "ButtonTextLabel"
