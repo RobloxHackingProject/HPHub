@@ -60,6 +60,24 @@ end
 end
 
 --Lets
+if game.PlaceId == 6516141723 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/doors.lua"))()
+end
+end
+
+--Lets
+if game.PlaceId == 6942069 then do
+		print("nice")
+end
+end
+
+--Lets
+if game.PlaceId == 6942069 then do
+		print("nice")
+end
+end
+
+--Lets
 if game.PlaceId == 6942069 then do
 		print("nice")
 end
