@@ -1,5 +1,5 @@
 --Credits to the library maker
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/ultrarevenant", true))()
 local Flags = Library.Flags
 --Library.DefaultColor = Color3.fromRGB(65, 143, 232)
 
@@ -21,10 +21,6 @@ local Window4 = Library:Window({
 
 local Window5 = Library:Window({
    Text = "Settings"
-})
-Library:Notification({
-           Text = "Press ESC to access the gui",
-           Duration = 10
 })
 
 Window:Button({
