@@ -59,8 +59,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
---Lets
-if game.PlaceId == 6516141723 then do
+--Doors
+if game.PlaceId == 2440500124 then do
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/doors.lua"))()
 end
 end
