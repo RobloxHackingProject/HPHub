@@ -71,7 +71,7 @@ Window2:Button({
    end
 })
 Window2:Slider({
-   Text = "Bike Bax Speed",
+   Text = "Bike Max Speed",
    Default = 40,
    Minimum = 40,
    Maximum = 200,
@@ -111,8 +111,8 @@ Window4:Slider({
 })
 Window4:Slider({
 	Text = "HipHeight",
-	Default = 3,
-	Minimum = 3,
+	Default = 2.889,
+	Minimum = 2,
 	Maximum = 50,
 	Callback = function(value)
 		game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
