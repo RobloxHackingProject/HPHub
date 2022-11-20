@@ -65,15 +65,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
---Lets
-if game.PlaceId == 6942069 then do
-		print("nice")
+--Robloxian High School
+if game.PlaceId == 447452406 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/robloxianhighschool.lua"))()
 end
 end
 
---Lets
-if game.PlaceId == 6942069 then do
-		print("nice")
+--Rainbow Friends
+if game.PlaceId == 3085257211 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/friends.lua"))()
 end
 end
 
