@@ -72,7 +72,7 @@ end
 end
 
 --Rainbow Friends
-if game.PlaceId == 3085257211 then do
+if game.PlaceId == 8888615802 then do
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/friends.lua"))()
 end
 end
