@@ -132,8 +132,8 @@ Window5:Slider({
 })
 Window5:Slider({
 	Text = "HipHeight",
-	Default = 3,
-	Minimum = 3,
+	Default = 2.8,
+	Minimum = 2,
 	Maximum = 50,
 	Callback = function(value)
 		game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
