@@ -77,6 +77,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
+--Cart Ride Delivery Service
+if game.PlaceId == 11454403177 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/Cart.lua"))()
+end
+end
+
+--Killstreak Sword Fighting BETA
+if game.PlaceId == 10900677021 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/Killstreak.lua"))()
+end
+end
+
 --Lets
 if game.PlaceId == 6942069 then do
 		print("nice")
