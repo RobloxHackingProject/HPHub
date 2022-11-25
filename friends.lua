@@ -132,7 +132,7 @@ Window5:Slider({
 })
 Window5:Slider({
 	Text = "HipHeight",
-	Default = 2.8,
+	Default = 2,
 	Minimum = 2,
 	Maximum = 50,
 	Callback = function(value)
