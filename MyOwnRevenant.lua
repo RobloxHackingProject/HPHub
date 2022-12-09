@@ -145,6 +145,7 @@ end
 
 function library:Window(Info)
 Info.Text = Info.Text or "Revenant"
+Info.Toggle = Info.Toggle or true
 
 local Pos = 0.05
 
@@ -160,13 +161,8 @@ local revenant = Instance.new("ScreenGui")
 revenant.Name = "Revenant"
 revenant.Parent = game:GetService("CoreGui")
 
-local revenantN = Instance.new("StringValue")
-revenantN.Value = Info.Text
-revenantN.Parent = revenant
-revenantN.Name = "GuiName"
-
 local WindowOpened = Instance.new("BoolValue", revenant)
-WindowOpened.Value = true
+WindowOpened.Value = Info.Toggle
 
 local topbar = Instance.new("Frame")
 topbar.Name = "Topbar"
