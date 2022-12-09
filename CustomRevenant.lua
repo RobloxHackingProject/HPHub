@@ -1,6 +1,6 @@
 --Circle fixf
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("Updated 0.3")
+print("Updated 0.4")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -145,7 +145,7 @@ Info.Text = Info.Text or "Revenant"
 local Pos = 0.05
 
 for _,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-    if v.isrevenant then
+    if v.:FindFirstChild("isrevenant") then
         Pos = Pos + 0.12
     end
 end
