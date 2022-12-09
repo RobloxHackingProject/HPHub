@@ -151,9 +151,14 @@ end
 
 local insidewindow = {}
 
-local revenant = Instance.new("ScreenGui")
-revenant.Name = Info.Text
-revenant.Parent = game:GetService("CoreGui")
+local revenantGUI = Instance.new("ScreenGui")
+revenantGUI.Name = Info.Text
+revenantGUI.Parent = game:GetService("CoreGui")
+	
+local revenant = Instance.new("BoolValue")
+revenant.Value = true
+revenant.Parent = revenant
+revenant.Name = "isrevenant"
 
 local WindowOpened = Instance.new("BoolValue", revenant)
 WindowOpened.Value = true
@@ -164,11 +169,6 @@ topbar.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 topbar.Position = UDim2.fromScale(Pos, 0.1)
 topbar.Size = UDim2.fromOffset(225, 38)
 topbar.Parent = revenant
-
-local isrevenant = Instance.new("BoolValue")
-isrevenant.Value = true
-isrevenant.Parent = revenant
-isrevenant.Name = "isrevenant"
 
 local dragging
 local dragInput
