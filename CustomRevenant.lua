@@ -1,4 +1,4 @@
---Circle fixf
+--Circle fixf (Updated 0.1)
 --https://v3rmillion.net/showthread.php?tid=1182163
 local library = {}
 library.Flags = {}
@@ -157,7 +157,7 @@ revenantGUI.Parent = game:GetService("CoreGui")
 	
 local revenant = Instance.new("BoolValue")
 revenant.Value = true
-revenant.Parent = revenant
+revenant.Parent = revenantGUI
 revenant.Name = "isrevenant"
 
 local WindowOpened = Instance.new("BoolValue", revenant)
