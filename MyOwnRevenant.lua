@@ -160,10 +160,10 @@ local revenant = Instance.new("ScreenGui")
 revenant.Name = "Revenant"
 revenant.Parent = game:GetService("CoreGui")
 
-local revenantN = Instance.new("BoolValue")
-revenantN.Value = true
+local revenantN = Instance.new("StringValue")
+revenantN.Value = Info.Text
 revenantN.Parent = revenant
-revenantN.Name = Info.Text
+revenantN.Name = "GuiName"
 
 local WindowOpened = Instance.new("BoolValue", revenant)
 WindowOpened.Value = true
