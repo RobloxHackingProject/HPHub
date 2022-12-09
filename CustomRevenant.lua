@@ -1,6 +1,6 @@
 --Circle fixf
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("Updated 0.1")
+print("Updated 0.2")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -156,10 +156,12 @@ local revenantGUI = Instance.new("ScreenGui")
 revenantGUI.Name = Info.Text
 revenantGUI.Parent = game:GetService("CoreGui")
 	
-local revenant = Instance.new("BoolValue")
-revenant.Value = true
-revenant.Parent = revenantGUI
-revenant.Name = "isrevenant"
+local revenantN = Instance.new("BoolValue")
+revenantN.Value = true
+revenantN.Parent = revenantGUI
+revenantN.Name = "isrevenant"
+
+local revenant = revenantN.Parent
 
 local WindowOpened = Instance.new("BoolValue", revenant)
 WindowOpened.Value = true
