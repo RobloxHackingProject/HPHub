@@ -1,5 +1,5 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("epic smelly")
+print("hello")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -161,6 +161,15 @@ local revenant = Instance.new("ScreenGui")
 revenant.Name = "Revenant"
 revenant.Parent = game:GetService("CoreGui")
 
+local modal = Instance.new("TextButton")
+modal.Name = "Modal"
+modal.Text = ""
+modal.Visible = true
+modal.BackgroundTransparency = 1
+modal.TextTransparency = 1
+modal.Parent = revenant
+modal.Modal = true
+
 local WindowOpened = Instance.new("BoolValue", revenant)
 WindowOpened.Value = true
 
@@ -292,13 +301,6 @@ fixLine1.BorderSizePixel = 0
 fixLine1.Position = UDim2.fromScale(0.5, 0.0526)
 fixLine1.Size = UDim2.fromOffset(225, 4)
 fixLine1.Parent = button
-
-local modal = Instance.new("TextButton")
-modal.Name = "Modal"
-modal.Text = ""
-modal.Visible = false
-modal.Parent = revenant
-modal.Modal = true
 
 local buttonTextButton = Instance.new("TextButton")
 buttonTextButton.Name = "ButtonTextButton"
