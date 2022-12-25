@@ -173,12 +173,12 @@ modal.Modal = true
 local WindowOpened = Instance.new("BoolValue", revenant)
 WindowOpened.Value = true
 
-if WindowOpened.Value = true then do
+if WindowOpened.Value == true then do
 local userInputService = game:GetService("UserInputService")
 userInputService.MouseIconEnabled = true
 end
 end
-if WindowOpened.Value = false then do
+if WindowOpened.Value == false then do
 local userInputService = game:GetService("UserInputService")
 userInputService.MouseIconEnabled = false
 end
