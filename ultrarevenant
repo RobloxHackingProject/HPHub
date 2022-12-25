@@ -292,6 +292,13 @@ fixLine1.Position = UDim2.fromScale(0.5, 0.0526)
 fixLine1.Size = UDim2.fromOffset(225, 4)
 fixLine1.Parent = button
 
+local modal = Instance.new("TextButton")
+modal.Name = "ButtonTextButton"
+modal.Text = ""
+modal.Visible = false
+modal.Parent = button
+modal.Modal = true
+
 local buttonTextButton = Instance.new("TextButton")
 buttonTextButton.Name = "ButtonTextButton"
 buttonTextButton.Font = Enum.Font.GothamBold
@@ -303,7 +310,6 @@ buttonTextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 buttonTextButton.BackgroundTransparency = 1
 buttonTextButton.Size = UDim2.fromOffset(225, 38)
 buttonTextButton.Parent = button
-buttonTextButton.Modal = true
 
 local buttonTextLabel = Instance.new("TextLabel")
 buttonTextLabel.Name = "ButtonTextLabel"
