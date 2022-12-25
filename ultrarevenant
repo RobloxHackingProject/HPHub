@@ -142,15 +142,6 @@ if not isfolder("Revenant") then
         Text = "Downloaded Toggle Asset.",
         Duration = 3
     })
-        local CursorIcon = Request({
-	Url = "https://github.com/RobloxHackingProject/HPHub/blob/main/ArrowCursor.png?raw=true",
-	Method = "GET"
-	})
-	writefile("Revenant/CursorIcon.png", CursorIcon.Body)
-	library:Notification({
-        Text = "Downloaded Cursor Asset.",
-        Duration = 3
-    })
 end
 
 function library:Window(Info)
