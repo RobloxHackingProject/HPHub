@@ -293,10 +293,10 @@ fixLine1.Size = UDim2.fromOffset(225, 4)
 fixLine1.Parent = button
 
 local modal = Instance.new("TextButton")
-modal.Name = "ButtonTextButton"
+modal.Name = "Modal"
 modal.Text = ""
 modal.Visible = false
-modal.Parent = button
+modal.Parent = revenant
 modal.Modal = true
 
 local buttonTextButton = Instance.new("TextButton")
