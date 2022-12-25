@@ -1,5 +1,5 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("hello")
+print("I've a bomb in my backpack")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -172,6 +172,17 @@ modal.Modal = true
 
 local WindowOpened = Instance.new("BoolValue", revenant)
 WindowOpened.Value = true
+
+if WindowOpened.Value = true then do
+local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = true
+end
+end
+if WindowOpened.Value = false then do
+local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = false
+end
+end
 
 local topbar = Instance.new("Frame")
 topbar.Name = "Topbar"
