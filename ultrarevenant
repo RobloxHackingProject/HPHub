@@ -1,5 +1,4 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("big doo doo")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -179,17 +178,6 @@ topbar.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 topbar.Position = UDim2.fromScale(Pos, 0.1)
 topbar.Size = UDim2.fromOffset(225, 38)
 topbar.Parent = revenant
-
-if topbar.Visible == false then do
-local userInputService = game:GetService("UserInputService")
-userInputService.MouseIconEnabled = false
-end
-end
-if topbar.Visible == true then do
-local userInputService = game:GetService("UserInputService")
-userInputService.MouseIconEnabled = true
-end
-end
 
 local dragging
 local dragInput
