@@ -109,14 +109,13 @@ Window4:Slider({
 })
 Window4:Slider({
 	Text = "HipHeight",
-	Default = 2.889,
-	Minimum = 2,
+	Default = game.Players.LocalPlayer.Character.Humanoid.HipHeight,
+	Minimum = 0,
 	Maximum = 50,
 	Callback = function(value)
 		game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
 	end
 })
-
 Window5:Button({
    Text = "Made by: TRHP .gg/G3KVvt988s",
    Color = Color3.fromRGB(214, 214, 214),
