@@ -1,3 +1,4 @@
+print("1")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
