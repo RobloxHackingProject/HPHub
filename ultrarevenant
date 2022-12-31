@@ -1,4 +1,4 @@
-print("Test2")
+print("Test3")
 --https://v3rmillion.net/showthread.php?tid=1182163
 local library = {}
 library.Flags = {}
@@ -169,18 +169,6 @@ modal.BackgroundTransparency = 1
 modal.TextTransparency = 1
 modal.Parent = revenant
 modal.Modal = true
-
-local WindowOpened = Instance.new("BoolValue", revenant)
-WindowOpened.Value = true
-while WindowOpened.Value == true do wait()
-local userInputService = game:GetService("UserInputService")
-userInputService.MouseIconEnabled = true
-end
-while WindowOpened.Value == false do wait()
-local userInputService = game:GetService("UserInputService")
-userInputService.MouseIconEnabled = false
-end
-
 
 local topbar = Instance.new("Frame")
 topbar.Name = "Topbar"
