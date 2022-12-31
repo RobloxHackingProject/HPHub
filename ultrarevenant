@@ -1153,9 +1153,6 @@ close.MouseButton1Click:Connect(function()
     TweenService:Create(close, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Rotation = WindowOpened.Value and 0 or 180}):Play()
 end)
 
-return insidewindow
-end
-return library
 while true do wait()
     for _,v in pairs(game:GetService("CoreGui"):GetChildren()) do
         if v.Name == "Revenant" then
@@ -1172,3 +1169,6 @@ userInputService.MouseIconEnabled = true
         end
     end
 end
+return insidewindow
+end
+return library
