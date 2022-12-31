@@ -32,6 +32,22 @@ function library:Toggle()
         end
     end
 end
+while true do wait()
+    for _,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+        if v.Name == "Revenant" then
+	            if v.Enabled == false then do
+	    local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = false
+	    end
+	    end
+            if v.Enabled == true then do
+	    local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = true
+	    end
+	    end
+        end
+    end
+end
 
 if not game:GetService("CoreGui"):FindFirstChild("NotificationLibrary") then
 local notificationLibrary = Instance.new("ScreenGui")
@@ -587,9 +603,9 @@ end
 toggleTextButton.MouseButton1Click:Connect(function()
     Toggled = not Toggled
     library.Flags[Info.Flag] = Toggled
-    pcall(Info.Callback, Toggled)
     TweenService:Create(innerFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{Position = Toggled and UDim2.new(0, 22,0, 2) or UDim2.new(0, 3,0, 2)}):Play()
     TweenService:Create(outerFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{BackgroundColor3 = Toggled and library.DefaultColor or Color3.fromRGB(62, 62, 62)}):Play()
+    pcall(Info.Callback, Toggled)
 end)
 
 return insidetoggle
