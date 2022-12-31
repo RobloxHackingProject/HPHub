@@ -1,4 +1,4 @@
-print("Test1")
+print("Test2")
 --https://v3rmillion.net/showthread.php?tid=1182163
 local library = {}
 library.Flags = {}
@@ -172,6 +172,15 @@ modal.Modal = true
 
 local WindowOpened = Instance.new("BoolValue", revenant)
 WindowOpened.Value = true
+while WindowOpened.Value == true do wait()
+local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = true
+end
+while WindowOpened.Value == false do wait()
+local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = false
+end
+
 
 local topbar = Instance.new("Frame")
 topbar.Name = "Topbar"
@@ -590,6 +599,8 @@ toggleTextButton.MouseButton1Click:Connect(function()
     library.Flags[Info.Flag] = Toggled
     TweenService:Create(innerFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{Position = Toggled and UDim2.new(0, 22,0, 2) or UDim2.new(0, 3,0, 2)}):Play()
     TweenService:Create(outerFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{BackgroundColor3 = Toggled and library.DefaultColor or Color3.fromRGB(62, 62, 62)}):Play()
+end)
+toggleTextButton.MouseButton1Click:Connect(function()
     pcall(Info.Callback, Toggled)
 end)
 
