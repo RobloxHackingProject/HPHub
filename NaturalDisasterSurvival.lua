@@ -71,6 +71,15 @@ Window:Button({
 game.Players.LocalPlayer.Character.FallDamageScript:Destroy()
 end
 })
+Window:Button({
+	Text = "Launch Launch Land Rocket",
+	Callback = function()
+fireclickdetector(game:GetService("Workspace").Structure["Launch Land"]["SPACESHIP!!"].Shuttle.IgnitionButton.ClickDetector)
+fireclickdetector(game:GetService("Workspace").Structure["Launch Land"].RocketStand.ConsoleLower.ReleaseButtonLower.ClickDetector)
+fireclickdetector(game:GetService("Workspace").Structure["Launch Land"].RocketStand.ConsoleUpper.ReleaseButtonUpper.ClickDetector)
+fireclickdetector(game:GetService("Workspace").Structure["Launch Land"].LoadingTower.Console.ReleaseEntryBridge.ClickDetector)
+end
+})
 
 
 Window2:Button({
