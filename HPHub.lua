@@ -89,9 +89,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
---Lets
-if game.PlaceId == 6942069 then do
-		print("nice")
+--Evade
+if game.PlaceId == 9872472334 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/evade.lua"))()
+end
+end
+--Evade Easy normal mode or something
+if game.PlaceId == 10662542523 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/evade.lua"))()
 end
 end
 
