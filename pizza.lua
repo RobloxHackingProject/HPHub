@@ -30,21 +30,10 @@ game.Workspace.Trucks.Truck2.LeverBounds.ClickDetector.Detector:FireServer()
 game.Workspace.Trucks.Truck1.LeverBounds.ClickDetector.Detector:FireServer()
    end
 })
-Window:Toggle({
-   Text = "Job Buttons Disabled",
-   Callback = function(bool)
-   	   if bool == true then do local gru = game.Workspace.JobButtons:clone()
-		  gru.Parent = game.Players.LocalPlayer.StarterGear
-		  wait(0.1)
-          game.Workspace.JobButtons:destroy()
-	   end
-	   end
-	   if bool == false then do local minions = game.Players.LocalPlayer.StarterGear.JobButtons:clone()
-	   minions.Parent = workspace
-	   wait(0.1)
-	   game.Players.LocalPlayer.StarterGear.JobButtons:destroy()
-	   end
-	   end
+Window:Button({
+   Text = "Remove Job Buttons",
+   Callback = function()
+game.Workspace.JobButtons:destroy()
    end
 })
 Window:Toggle({
@@ -102,13 +91,25 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(24, 5, 6
 })
 
 
-
 Window3:Button({
 	Text = "Start Infinite Yield",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/IYNotByMe.lua"))()
 	end
 })
+Window3:Toggle({
+   Text = "Sit",
+   Callback = function(bool)
+game.Players.LocalPlayer.Character.Humanoid.Sit = bool
+   end
+})
+Window3:Button({
+	Text = "Mute Alarm",
+	Callback = function()
+		game:GetService("Workspace").Alarm.Alarm.Alarm:Destroy()
+	end
+})
+
 
 Window4:Slider({
    Text = "WalkSpeed",
