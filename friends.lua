@@ -3,7 +3,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/blood
 local Flags = Library.Flags
 --Library.DefaultColor = Color3.fromRGB(65, 143, 232)
 Library:Notification({
-           Text = "Re-toggle your esp after a round is over.",
+           Text = "Re-toggle your esp after the round is over.",
            Duration = 5
        })
 
@@ -48,6 +48,25 @@ end
 end
    end
 })
+Window:Button({
+Text = "Auto-Collect Items",
+Callback = function()
+Library:Notification({
+           Text = "If you get stuck teleport back to the theater.",
+           Duration = 3
+       })
+for i = 1, 24 do
+for __,v in pairs(game:GetService("Workspace"):GetChildren()) do
+if v:FindFirstChild("TouchTrigger") then
+local pos = v.TouchTrigger.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(374.44, 45, 137.24)
+wait(0.1)
+end
+end
+end
+end})
 
 Window2:Toggle({
    Text = "Friends",
@@ -81,7 +100,6 @@ end
 end
 end
 if bool == true then do
-print("real")
 for __,v in pairs(game:GetService("Workspace"):GetChildren()) do
 if v:FindFirstChild("TouchTrigger") then
  local esp = Instance.new("Highlight", v)
