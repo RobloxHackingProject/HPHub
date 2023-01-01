@@ -155,3 +155,15 @@ while true do
    end
    wait(1)
 end
+while true do wait()
+if game:GetService("CoreGui").Revenant.Enabled == false then do
+local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = false
+end
+end
+if game:GetService("CoreGui").Revenant.Enabled == true then do
+local userInputService = game:GetService("UserInputService")
+userInputService.MouseIconEnabled = true
+end
+end
+end
