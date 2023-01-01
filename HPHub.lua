@@ -100,3 +100,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
+--Natural Disaster Survival [Modded]
+if game.PlaceId == 1994279859 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/rip-offs/Natural%20Disaster%20Survival%20%5BModded%5D.lua"))()
+end
+end
+
