@@ -343,8 +343,8 @@ buttonTextButton.MouseButton1Click:Connect(function()
 end)
 end
 
-function insidewindow:Button(Info)
-Info.Text = Info.Text or "Button"
+function insidewindow:TextBox(Info)
+Info.Text = Info.Text or "TextBox"
 
 local textbox = Instance.new("Frame")
 textbox.Name = "textbox"
