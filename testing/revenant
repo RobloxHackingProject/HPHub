@@ -337,7 +337,7 @@ function insidewindow:TextBox(Info)
 Info.Text = Info.Text or "TextBox"
 
 local textbox = Instance.new("Frame")
-textbox.Name = "textbox"
+textbox.Name = Info.Text
 textbox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 textbox.Size = UDim2.fromOffset(225, 38)
 textbox.Parent = itemContainer
@@ -357,9 +357,10 @@ fixLine2.Size = UDim2.fromOffset(225, 4)
 fixLine2.Parent = textbox
 
 local TextBox = Instance.new("TextBox")
-TextBox.Name = "ButtonTextButton"
+TextBox.Name = "TextBox"
 TextBox.Font = Enum.Font.GothamBold
 TextBox.PlaceholderText = Info.Text
+TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(214, 214, 214)
 TextBox.TextSize = 13
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
