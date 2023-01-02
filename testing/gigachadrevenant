@@ -333,6 +333,63 @@ buttonTextButton.MouseButton1Click:Connect(function()
 end)
 end
 
+function insidewindow:TextBox(Info)
+Info.Text = Info.Text or "TextBox"
+
+local TextBox = Instance.new("Frame")
+TextBox.Name = "TextBox"
+TextBox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+TextBox.Size = UDim2.fromOffset(225, 38)
+TextBox.Parent = itemContainer
+
+local uICorner2 = Instance.new("UICorner")
+uICorner2.Name = "UICorner"
+uICorner2.CornerRadius = UDim.new(0, 4)
+uICorner2.Parent = TextBox
+
+local fixLine1 = Instance.new("Frame")
+fixLine1.Name = "FixLine"
+fixLine1.AnchorPoint = Vector2.new(0.5, 1)
+fixLine1.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+fixLine1.BorderSizePixel = 0
+fixLine1.Position = UDim2.fromScale(0.5, 0.0526)
+fixLine1.Size = UDim2.fromOffset(225, 4)
+fixLine1.Parent = TextBox
+
+local TextBoxBox = Instance.new("TextBox")
+TextBoxBox.Name = "ButtonTextButton"
+TextBoxBox.Font = Enum.Font.GothamBold
+TextBoxBox.Text = ""
+TextBoxBox.TextColor3 = Color3.fromRGB(214, 214, 214)
+TextBoxBox.TextSize = 13
+TextBoxBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxBox.BackgroundTransparency = 1
+TextBoxBox.Size = UDim2.fromOffset(225, 38)
+TextBoxBox.Parent = TextBox
+
+local TextBoxLabel = Instance.new("TextLabel")
+TextBoxLabel.Name = "ButtonTextLabel"
+TextBoxLabel.Font = Enum.Font.GothamBold
+TextBoxLabel.Text = Info.Text
+TextBoxLabel.TextColor3 = Color3.fromRGB(214, 214, 214)
+TextBoxLabel.TextSize = 13
+TextBoxLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextBoxLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxLabel.BackgroundTransparency = 1
+TextBoxLabel.Position = UDim2.fromScale(0.0489, 0)
+TextBoxLabel.Size = UDim2.fromOffset(214, 38)
+TextBoxLabel.Parent = TextBox
+
+TextBox.MouseEnter:Connect(function()
+    fixLine1.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+    button.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+end)
+
+TextBox.MouseLeave:Connect(function()
+    fixLine1.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+    button.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+end)
+
 function insidewindow:Prompt(Info)
 Info.Text = Info.Text or "Prompt"
 Info.OnConfirm = Info.OnConfirm or function() end
