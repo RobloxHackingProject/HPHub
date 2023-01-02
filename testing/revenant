@@ -305,17 +305,6 @@ buttonTextButton.BackgroundTransparency = 1
 buttonTextButton.Size = UDim2.fromOffset(225, 38)
 buttonTextButton.Parent = button
 
-local TextBox = Instance.new("TextBox")
-TextBox.Name = "TextBox"
-TextBox.Font = Enum.Font.GothamBold
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(214, 214, 214)
-TextBox.TextSize = 13
-TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.BackgroundTransparency = 1
-TextBox.Size = UDim2.fromOffset(225, 38)
-TextBox.Parent = button
-
 local buttonTextLabel = Instance.new("TextLabel")
 buttonTextLabel.Name = "ButtonTextLabel"
 buttonTextLabel.Font = Enum.Font.GothamBold
@@ -352,6 +341,62 @@ end)
 buttonTextButton.MouseButton1Click:Connect(function()
     pcall(Info.Callback)
 end)
+end
+
+function insidewindow:Button(Info)
+Info.Text = Info.Text or "Button"
+
+local textbox = Instance.new("Frame")
+textbox.Name = "textbox"
+textbox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+textbox.Size = UDim2.fromOffset(225, 38)
+textbox.Parent = itemContainer
+
+local uICorner3 = Instance.new("UICorner")
+uICorner3.Name = "UICorner"
+uICorner3.CornerRadius = UDim.new(0, 4)
+uICorner3.Parent = textbox
+
+local fixLine2 = Instance.new("Frame")
+fixLine2.Name = "FixLine"
+fixLine2.AnchorPoint = Vector2.new(0.5, 1)
+fixLine2.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+fixLine2.BorderSizePixel = 0
+fixLine2.Position = UDim2.fromScale(0.5, 0.0526)
+fixLine2.Size = UDim2.fromOffset(225, 4)
+fixLine2.Parent = textbox
+
+local TextBox = Instance.new("TextBox")
+TextBox.Name = "ButtonTextButton"
+TextBox.Font = Enum.Font.GothamBold
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(214, 214, 214)
+TextBox.TextSize = 13
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1
+TextBox.Size = UDim2.fromOffset(225, 38)
+TextBox.Parent = textbox
+
+TextBox.MouseEnter:Connect(function()
+    fixLine2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+    TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+end)
+
+TextBox.MouseLeave:Connect(function()
+    fixLine2.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+    TextBox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+end)
+
+TextBox.MouseEnter:Connect(function()
+    fixLine2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+    TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+end)
+
+TextBox.MouseLeave:Connect(function()
+    fixLine2.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+    TextBox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+end)
+
 end
 
 function insidewindow:TextBox(Info)
