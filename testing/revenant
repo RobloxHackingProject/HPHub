@@ -1,5 +1,5 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("Sheeeeeeeeeeesh")
+print("GG")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -328,16 +328,6 @@ button.MouseLeave:Connect(function()
     button.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 end)
 
-TextBox.MouseEnter:Connect(function()
-    fixLine1.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-    button.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-end)
-
-TextBox.MouseLeave:Connect(function()
-    fixLine1.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-    button.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-end)
-
 buttonTextButton.MouseButton1Click:Connect(function()
     pcall(Info.Callback)
 end)
@@ -387,20 +377,6 @@ TextBox.MouseLeave:Connect(function()
     TextBox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 end)
 
-TextBox.MouseEnter:Connect(function()
-    fixLine2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-    TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-end)
-
-TextBox.MouseLeave:Connect(function()
-    fixLine2.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-    TextBox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-end)
-
-end
-
-function insidewindow:TextBox(Info)
-Info.Text = Info.Text or "TextBox"
 end
 
 function insidewindow:Prompt(Info)
