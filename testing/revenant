@@ -1,5 +1,5 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("Holy")
+print("Sheeeeeeeeeeesh")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -311,7 +311,6 @@ TextBox.Font = Enum.Font.GothamBold
 TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(214, 214, 214)
 TextBox.TextSize = 13
-TextBox.AutoButtonColor = false
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BackgroundTransparency = 1
 TextBox.Size = UDim2.fromOffset(225, 38)
