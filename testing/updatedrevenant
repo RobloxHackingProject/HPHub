@@ -1,4 +1,4 @@
-print("test1")
+print("test2")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -156,6 +156,7 @@ end
 
 function library:Window(Info)
 Info.Text = Info.Text or "Revenant"
+Info.WindowOpen = Info.WindowOpen or true
 
 local Pos = 0.05
 
@@ -1230,5 +1231,6 @@ close.MouseButton1Click:Connect(function()
 end)
 
 return insidewindow
+end
 end
 return library
