@@ -4,8 +4,7 @@ local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
 
-local Players = game:GetService("Players")
-local Player = Players.LocalPlayer
+local Player = game:GetService("Players").LocalPlayer
 
 local Mouse = Player:GetMouse()
 
