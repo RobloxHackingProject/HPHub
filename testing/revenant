@@ -1,5 +1,5 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("TextV3.4.1")
+print("TextV3.4.1 is coming this week")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
