@@ -1,5 +1,5 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("GG")
+print("TextV3.4.1")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -359,7 +359,7 @@ fixLine2.Parent = textbox
 local TextBox = Instance.new("TextBox")
 TextBox.Name = "ButtonTextButton"
 TextBox.Font = Enum.Font.GothamBold
-TextBox.Text = ""
+TextBox.PlaceholderText = Info.Text
 TextBox.TextColor3 = Color3.fromRGB(214, 214, 214)
 TextBox.TextSize = 13
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
