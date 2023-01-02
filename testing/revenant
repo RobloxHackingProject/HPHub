@@ -1,5 +1,5 @@
 --https://v3rmillion.net/showthread.php?tid=1182163
-print("Hola")
+print("Holy")
 local library = {}
 library.Flags = {}
 library.DefaultColor = Color3.fromRGB(56, 207, 154)
@@ -305,7 +305,7 @@ buttonTextButton.BackgroundTransparency = 1
 buttonTextButton.Size = UDim2.fromOffset(225, 38)
 buttonTextButton.Parent = button
 
-local TextBox = Instance.new("Textbox")
+local TextBox = Instance.new("TextBox")
 TextBox.Name = "TextBox"
 TextBox.Font = Enum.Font.GothamBold
 TextBox.Text = ""
