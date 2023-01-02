@@ -162,7 +162,7 @@ revenant.Name = "Revenant"
 revenant.Parent = game:GetService("CoreGui")
 
 local WindowOpened = Instance.new("BoolValue", revenant)
-WindowOpened.Value = true
+WindowOpened.Value = Info.WindowOpen or true
 
 local topbar = Instance.new("Frame")
 topbar.Name = "Topbar"
