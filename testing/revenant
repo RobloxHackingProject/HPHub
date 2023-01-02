@@ -305,6 +305,18 @@ buttonTextButton.BackgroundTransparency = 1
 buttonTextButton.Size = UDim2.fromOffset(225, 38)
 buttonTextButton.Parent = button
 
+local TextBox = Instance.new("Textbox")
+TextBox.Name = "TextBox"
+TextBox.Font = Enum.Font.GothamBold
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(214, 214, 214)
+TextBox.TextSize = 13
+TextBox.AutoButtonColor = false
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1
+TextBox.Size = UDim2.fromOffset(225, 38)
+TextBox.Parent = button
+
 local buttonTextLabel = Instance.new("TextLabel")
 buttonTextLabel.Name = "ButtonTextLabel"
 buttonTextLabel.Font = Enum.Font.GothamBold
@@ -328,9 +340,23 @@ button.MouseLeave:Connect(function()
     button.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 end)
 
+TextBox.MouseEnter:Connect(function()
+    fixLine1.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+    button.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+end)
+
+TextBox.MouseLeave:Connect(function()
+    fixLine1.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+    button.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+end)
+
 buttonTextButton.MouseButton1Click:Connect(function()
     pcall(Info.Callback)
 end)
+end
+
+function insidewindow:TextBox(Info)
+Info.Text = Info.Text or "TextBox"
 end
 
 function insidewindow:Prompt(Info)
