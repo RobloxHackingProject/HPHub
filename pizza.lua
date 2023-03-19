@@ -1,7 +1,6 @@
 --Credits to the library maker
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
 local Flags = Library.Flags
---Library.DefaultColor = Color3.fromRGB(65, 143, 232)
 
 local Window = Library:Window({
    Text = "Exploits"
@@ -36,22 +35,33 @@ Window:Button({
 game.Workspace.JobButtons:destroy()
    end
 })
-Window:Toggle({
+Window:Button({
    Text = "Remove Manager Door",
-   Callback = function(bool)
-   	   if bool == true then do local gru2 = game.Workspace.PizzaPlaceDoors.ManagerDoor:clone()
-		  gru2.Parent = game.Players.LocalPlayer.StarterGear
-		  wait(0.1)
+   Callback = function()
           game.Workspace.PizzaPlaceDoors.ManagerDoor:destroy()
-	   end
-	   end
-	   if bool == false then do local minions2 = game.Players.LocalPlayer.StarterGear.ManagerDoor:clone()
-	   minions2.Parent = workspace
-	   wait(0.1)
-	   game.Players.LocalPlayer.StarterGear.ManagerDoor:destroy()
-	   end
-	   end
    end
+})
+Window:Toggle({
+   Text = "Spam Team Change",
+   Callback = function(bool)
+if bool then
+local runService = game:GetService("RunService")
+event = runService.RenderStepped:Connect(function()
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer("ChangeJob", "Cashier")
+wait(0.2)
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer("ChangeJob", "Cook")
+wait(0.2)
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer("ChangeJob", "Pizza Boxer")
+wait(0.2)
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer("ChangeJob", "Delivery")
+wait(0.2)
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer("ChangeJob", "Supplier")
+end)
+end
+if not bool then
+event:Disconnect()
+end
+end
 })
 
 
@@ -103,11 +113,20 @@ Window3:Toggle({
 game.Players.LocalPlayer.Character.Humanoid.Sit = bool
    end
 })
-Window3:Button({
+Window3:Toggle({
 	Text = "Mute Alarm",
-	Callback = function()
-		game:GetService("Workspace").Alarm.Alarm.Alarm:Destroy()
-	end
+	Callback = function(bool)
+if bool then
+local runService = game:GetService("RunService")
+event = runService.RenderStepped:Connect(function()
+wait(0.5)
+game:GetService("Workspace").Alarm.Alarm.Alarm:Destroy()
+end)
+end
+if not bool then
+event:Disconnect()
+end
+end
 })
 
 
