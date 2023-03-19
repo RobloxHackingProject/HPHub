@@ -23,32 +23,44 @@ local Window5 = Library:Window({
    Text = "Settings"
 })
 
-Window:Button({
-   Text = "Name ESP",
-   Callback = function()
-   game.Workspace.Killers.ChildAdded:Connect(function()
-     for __,v in pairs(game:GetService("Workspace").Killers:GetChildren()) do
-      if v:IsA("Model") then
-        local a = Instance.new("BillboardGui",v)
-        a.Name = "Lol"
-        a.Size = UDim2.new(7,0,7,0)
-        a.AlwaysOnTop = true
-        a.MaxDistance = 250
-        local b = Instance.new("Frame",a)
-        b.Size = UDim2.new(1,0, 1,0)
-        b.BackgroundTransparency = 1
-        b.BorderSizePixel = 0
-        b.BackgroundColor3 = Color3.new(0, 0, 0)
-        local c = Instance.new('TextLabel',b)
-        c.Size = UDim2.new(2,0,2,0)
-        c.BorderSizePixel = 0
-        c.TextSize = 15
-        c.Text = v.Name
-        c.BackgroundTransparency = 1
-      end
-	 end
-  	 end)
-	   end
+Window:Toggle({
+   Text = "Killer ESP",
+   Callback = function(bool)
+if bool then
+local runService = game:GetService("RunService")
+event = runService.RenderStepped:Connect(function()
+for __,v in pairs(game:GetService("Workspace").Killers:GetChildren()) do
+ if not v:FindFirstChild("Lol") then
+ local esp = Instance.new("Highlight", v)
+                esp.Name = "Lol"
+                esp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+                esp.FillColor = Color3.new(0, 0, 255)
+end
+end
+end)
+end
+if not bool then
+event:Disconnect()
+for __,v in pairs(game:GetService("Workspace").Killers:GetChildren()) do
+v:FindFirstChild("Lol"):Destroy()
+end
+end
+end
+})
+Window:Toggle({
+   Text = "Auto-Farm",
+   Callback = function(bool)
+if bool then
+local runService = game:GetService("RunService")
+event = runService.RenderStepped:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-184.321793, 80000, 179.415741)
+end)
+end
+if not bool then
+event:Disconnect()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-184.321793, 5, 179.415741)
+end
+end
 })
 
 
@@ -83,6 +95,12 @@ Window3:Button({
    game.Workspace.DevProducts:Destroy()
    end
 })
+Window3:Button({
+	Text = "Start Infinite Yield",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/IYNotByMe.lua"))()
+	end
+})
 
 Window4:Slider({
    Text = "WalkSpeed",
@@ -113,7 +131,7 @@ Window4:Slider({
 })
 Window4:Slider({
 	Text = "HipHeight",
-	Default = game.Players.LocalPlayer.Character.Humanoid.HipHeight,
+	Default = 0,
 	Minimum = 0,
 	Maximum = 50,
 	Callback = function(value)
