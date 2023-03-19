@@ -106,3 +106,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/
 end
 end
 
+--Every Second You Get +1 Jump Power
+if game.PlaceId == 11063612131 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/%2B1jumpeverysecond.lua"))()
+end
+end
+
+--FLOOR IS LAVA!
+if game.PlaceId == 7205183370 then do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/floorislava.lua"))()
+end
+end
