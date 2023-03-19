@@ -40,79 +40,50 @@ end
 end
    end
 })
-Window:Button({
-   Text = "R63 ESP (Glitchy)",
+Window:Toggle({
+   Text = "R63 ESP",
    Callback = function(bool)
-     for __,v in pairs(game:GetService("Workspace").SlederSpawn:GetChildren()) do
-      if v:IsA("Model") then
-        local a = Instance.new("BillboardGui",v)
-        a.Name = "Lol"
-        a.Size = UDim2.new(7,0,7,0)
-        a.AlwaysOnTop = true
-        a.MaxDistance = 250
-        local b = Instance.new("Frame",a)
-        b.Size = UDim2.new(1,0, 1,0)
-        b.BackgroundTransparency = 1
-        b.BorderSizePixel = 0
-        b.BackgroundColor3 = Color3.new(0, 0, 0)
-        local c = Instance.new('TextLabel',b)
-        c.Size = UDim2.new(2,0,2,0)
-        c.BorderSizePixel = 0
-        c.TextSize = 15
-        c.Text = v.Name
-        c.BackgroundTransparency = 1
-      end
-	 end
-  end
+if bool then
+local runService = game:GetService("RunService")
+event = runService.RenderStepped:Connect(function()
+for __,v in pairs(game:GetService("Workspace").SlederSpawn:GetChildren()) do
+ if not v:FindFirstChild("Lol") then
+ local esp = Instance.new("Highlight", v)
+                esp.Name = "Lol"
+                esp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+                esp.FillColor = Color3.new(0, 0, 255)
+end
+end
+end)
+end
+if not bool then
+event:Disconnect()
+for __,v in pairs(game:GetService("Workspace").SlederSpawn:GetChildren()) do
+v:FindFirstChild("Lol"):Destroy()
+end
+end
+end
   })
 
 
 Window2:Button({
-   Text = "Spawn",
+   Text = "Gunspot #1",
    Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17, 3, 1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-153.058487, 120.933159, 0.595915973, 0.999780416, 1.94925374e-08, -0.0209540837, -1.79873965e-08, 1, 7.20188922e-08, 0.0209540837, -7.16261681e-08, 0.999780416)
+end
+})
+Window2:Button({
+   Text = "Gunspot #2",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-150.188812, 127.751923, -158.605972, -0.932343543, -6.33788275e-08, 0.361573696, -6.0923071e-08, 1, 1.81915798e-08, -0.361573696, -5.06737852e-09, -0.932343543)
 end
 })
 
-
-Window3:Dropdown({
-   Text = "Floor Color",
-   List = {"White", "Blue", "Green", "Red", "Purple", "Reset"},
-   Callback = function(bool)
-   	   if bool == "White" then do game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("White")
-	   end
-	   end
-	   	   if bool == "Blue" then do game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("Dark blue")
-	   end
-	   end
-	   	   if bool == "Green" then do game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("Dark green")
-	   end
-	   end
-	   	   if bool == "Red" then do game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("Bright red")
-	   end
-	   end
-	   	   if bool == "Purple" then do game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("Bright violet")
-	   end
-	   end
-	   if bool == "Reset" then do game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("Really black")
-	   end
-	   end
-   end
-})
-Window3:Toggle({
-   Text = "Dark Mode",
-   Callback = function(bool)
-if bool == true then do
-	game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("Really black")
-game:GetService("Lighting").ClockTime = "20"
-end
-end
-if bool == false then do 
-	game.Workspace.Map.Baseplate.BrickColor = BrickColor.new("Really black")
-game:GetService("Lighting").ClockTime = "10"
-end
-end
-end
+Window3:Button({
+	Text = "Start Infinite Yield",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/IYNotByMe.lua"))()
+	end
 })
 
 Window4:Slider({
