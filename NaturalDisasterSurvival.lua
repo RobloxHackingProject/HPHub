@@ -80,7 +80,23 @@ fireclickdetector(game:GetService("Workspace").Structure["Launch Land"].RocketSt
 fireclickdetector(game:GetService("Workspace").Structure["Launch Land"].LoadingTower.Console.ReleaseEntryBridge.ClickDetector)
 end
 })
-
+Window:Toggle({
+Text = "Auto-Farm",
+Callback = function(bool)
+if bool then
+local runService = game:GetService("RunService")
+event = runService.RenderStepped:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-264, 195, 288)
+end)
+if game.Players.LocalPlayer.Character.FallDamageScript then
+game.Players.LocalPlayer.Character.FallDamageScript:Destroy()
+end
+end
+if not bool then
+event:Disconnect()
+end
+end
+})
 
 Window2:Button({
 	Text = "Island",
